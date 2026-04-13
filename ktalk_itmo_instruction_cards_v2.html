@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Контур Толк — инструкция для преподавателей ИТМО Старт</title>
+  <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=w4nFbXB8yUEB_OEkF4TuYF3pA0j0aLRbB1RDWvYpaZpCr0kQVpObxFE-soo7wEqx5h2oaQ72yh1ckpVoxN9URxZM3_Q4p0L7XEkinZ-WG5YKVp4LzlB7ukK6W2lRe_Oij0gE3Dakm1Y9hVhpmvluFtpukaKGzJ3ivIp2I7u338c6Ni9U5XGPrMwHGFS3_X-i1NNXmj4d7BkUEztjdiVoZ1_6x_ZWJjKDiqE9J_Y7sSRTKXEWVp_wucSswnzrE7cCBaEsblwcun0Sgc3NCsbjkw" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://me.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jaGF0Z3B0LmNvbS9iYWNrZW5kLWFwaS9lc3R1YXJ5L2NvbnRlbnQ_aWQ9ZmlsZV8wMDAwMDAwMGZiODA3MjBhYmRlNGVhNWQyYTVkY2M1ZSZ0cz00OTMzNTMmcD1mcyZjaWQ9MSZzaWc9ZmI0ODIwYzNiZTBjMmM0ODJkMTY1NTdhZDdlN2JjOWFlNDZmYjkxZjc5ZTQzMjZjYTc3ZWQwOGJkNzkzODlkZiZ2PTA"/><style>
+    :root {
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --text: #18212f;
+      --muted: #5c6778;
+      --line: #d9e1ec;
+      --accent: #0f8fff;
+      --accent-2: #6b4eff;
+      --soft: #eef5ff;
+      --soft-2: #f3efff;
+      --ok: #e9fff2;
+      --ok-line: #b7ebca;
+      --shadow: 0 14px 40px rgba(16, 28, 51, 0.08);
+      --radius: 24px;
+      --radius-sm: 16px;
+      --page: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(15,143,255,.12), transparent 28%),
+        radial-gradient(circle at top right, rgba(107,78,255,.10), transparent 22%),
+        var(--bg);
+      line-height: 1.55;
+    }
+
+    .page {
+      width: min(calc(100% - 40px), var(--page));
+      margin: 28px auto 48px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0f8fff 0%, #6b4eff 100%);
+      color: #fff;
+      border-radius: 32px;
+      padding: 36px 36px 30px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 380px;
+      height: 380px;
+      right: -120px;
+      top: -120px;
+      background: rgba(255,255,255,.11);
+      border-radius: 50%;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      right: 120px;
+      bottom: -70px;
+      background: rgba(255,255,255,.08);
+      border-radius: 50%;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.16);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.05;
+      max-width: 860px;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 860px;
+      font-size: 18px;
+      color: rgba(255,255,255,.92);
+    }
+
+    .top-grid,
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .panel,
+    .card,
+    .sources {
+      background: var(--card);
+      border: 1px solid rgba(27, 50, 86, 0.06);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .panel {
+      padding: 24px;
+    }
+
+    .panel h2,
+    .card h2,
+    .sources h2 {
+      margin: 0 0 12px;
+      font-size: 24px;
+      line-height: 1.15;
+    }
+
+    .panel p,
+    .panel li,
+    .card p,
+    .card li,
+    .sources li {
+      font-size: 16px;
+      color: var(--text);
+    }
+
+    .muted { color: var(--muted); }
+
+    .span-7 { grid-column: span 7; }
+    .span-5 { grid-column: span 5; }
+    .span-6 { grid-column: span 6; }
+    .span-12 { grid-column: span 12; }
+
+    .quick-list,
+    .steps,
+    .check-list,
+    .source-list {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .quick-list li,
+    .steps li,
+    .check-list li,
+    .source-list li {
+      margin: 8px 0;
+    }
+
+    .chips {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.18);
+      border: 1px solid rgba(255,255,255,.18);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .note {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: var(--soft);
+      border: 1px solid #cfe3ff;
+      font-size: 15px;
+      color: #244266;
+    }
+
+    .note.ok {
+      background: var(--ok);
+      border-color: var(--ok-line);
+      color: #1f5d3c;
+    }
+
+    .card {
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: auto -60px -60px auto;
+      width: 160px;
+      height: 160px;
+      background: linear-gradient(135deg, rgba(15,143,255,.06), rgba(107,78,255,.08));
+      border-radius: 50%;
+    }
+
+    .card-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .badge {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #fff;
+      font-size: 20px;
+      font-weight: 800;
+      box-shadow: 0 8px 18px rgba(15, 143, 255, .22);
+    }
+
+    .card-title-wrap h2 {
+      margin: 2px 0 4px;
+      font-size: 22px;
+    }
+
+    .card-title-wrap p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .card-body {
+      position: relative;
+      z-index: 1;
+    }
+
+    .placeholder {
+      margin-top: 16px;
+      border: 2px dashed #c9d7ea;
+      border-radius: 18px;
+      background: linear-gradient(180deg, #fcfdff 0%, #f7faff 100%);
+      padding: 16px;
+    }
+
+    .placeholder strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    .placeholder p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .code-inline {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      background: #0f172a;
+      color: #f8fafc;
+      font-size: 13px;
+      line-height: 1.4;
+      word-break: break-word;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+
+    .sources {
+      margin-top: 22px;
+      padding: 24px;
+    }
+
+    .sources a {
+      color: #125edc;
+      text-decoration: none;
+    }
+
+    .footer-note {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 1040px) {
+      .span-7, .span-5, .span-6, .span-12 { grid-column: span 12; }
+      .page { width: min(calc(100% - 24px), var(--page)); }
+      .hero { padding: 28px 24px 24px; }
+    }
+
+    @page {
+      size: A4;
+      margin: 12mm;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+      .page {
+        width: 100%;
+        margin: 0;
+      }
+      .hero,
+      .panel,
+      .card,
+      .sources {
+        box-shadow: none;
+        border-color: #dfe6f1;
+      }
+      .hero {
+        background: #2358e6;
+      }
+      .card,
+      .panel,
+      .sources {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <div class="eyebrow">Инструкция для преподавателей · ИТМО Старт</div>
+      <h1>Контур Толк: быстрый старт для проведения занятий</h1>
+      <p>
+        Краткая и наглядная памятка для преподавателей: как войти в пространство ИТМО,
+        подготовиться к занятию, управлять участниками, включать демонстрацию экрана,
+        пользоваться чатом, опросами, таймером, записью и групповыми сессиями.
+      </p>
+    </section>
+
+    <section class="top-grid">
+      <div class="panel span-5">
+        <h2>Основная информация</h2>
+        <ul class="check-list">
+          <li>Для входа в пространство используйте <strong>корпоративную учетную запись ITMO.ID</strong>.</li>
+          <li>Адрес пространства ИТМО: <a href="https://itmo.ktalk.ru" target="_blank" style="color: inherit; text-decoration: underline;"><strong>itmo.ktalk.ru</strong></a>.</li>
+          <li>Расширенные функции удобнее использовать <strong>в приложении</strong>, а не только в браузере.</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="cards">
+      <article class="card span-6">
+        <div class="card-head">
+          <div class="badge">1</div>
+          <div class="card-title-wrap">
+            <h2>Вход в Контур Толк</h2>
+            <p>Как авторизоваться в пространстве ИТМО</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <ol class="steps">
+            <li>Откройте приложение Толка или веб-версию по адресу <a href="https://itmo.ktalk.ru" target="_blank" style="color: inherit; text-decoration: underline;"><strong>itmo.ktalk.ru</strong></a>.</li>
+            <li>Войдите через свою учетную запись <strong>ITMO ID</strong>.</li>
+            <li>Если вы переходите по ссылке, то в открывшемся окне выберите опцию <strong>Авторизация</strong> и войдите через свою учетную запись <strong>ITMO ID</strong></li>
+
+          </ol>
+          <div class="note">
+            Для преподавателей рекомендуется приложение Толка: в нем обычно доступно больше функций и удобнее работать с настройками встречи.
+          </div>
+          <div class="placeholder">
+            <img src="images/autorization.png" alt="Вход через SSO" style="width:100%; border-radius:18px; margin-top:16px; border:1px solid #d9e1ec;">
+          </div>
+        </div>
+      </article>
+
+      <article class="card span-6">
+        <div class="card-head">
+          <div class="badge">2</div>
+          <div class="card-title-wrap">
+            <h2>Перед началом занятия</h2>
+            <p>Быстрая проверка качества связи</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <ul class="check-list">
+            <li>Выберите нужные устройства для звука и видео (нажмите на значок шестеренки для перехода в настройки); базовый вариант — <strong>«Как в системе»</strong>.</li>
+            <li>Если интернет нестабилен, приоритет — качественный звук: при необходимости отключите камеру.</li>
+            <li>При желании включите <strong>виртуальный фон</strong> или легкое улучшение внешнего вида.</li>
+          </ul>
+          <div class="placeholder">
+            <img src="images/videoset.png" alt="Настройки видео" style="width:100%; border-radius:18px; margin-top:16px; border:1px solid #d9e1ec;">
+          </div>
+        </div>
+      </article>
+
+      <article class="card span-6">
+        <div class="card-head">
+          <div class="badge">3</div>
+          <div class="card-title-wrap">
+            <h2>Управление участниками</h2>
+            <p>Впустить, назначить модератора, отключить лишний шум</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <ul class="check-list">
+            <li>Список участников открывается через панель <strong>«Участники»</strong> во время встречи.</li>
+            <li>Если в комнате включено подключение с разрешения модератора, запросы на вход можно <strong>одобрять позже или отклонять</strong> через панель участников.</li>
+            <li>При необходимости назначьте второго преподавателя или ассистента <strong>модератором</strong>.</li>
+            <li>Модератор может управлять возможностями участников, включая контроль микрофонов и камер.</li>
+            <li>При необходимости участника можно <strong>исключить из встречи</strong>.</li>
+          </ul>
+          <div class="placeholder">
+            <img src="images/users.png" alt="Настройки видео" style="width:100%; border-radius:18px; margin-top:16px; border:1px solid #d9e1ec;">
+          </div>
+        </div>
+      </article>
+
+      <article class="card span-6">
+        <div class="card-head">
+          <div class="badge">4</div>
+          <div class="card-title-wrap">
+            <h2>Демонстрация экрана</h2>
+            <p>Как показать презентацию, сайт, видео или документ</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <ol class="steps">
+            <li>На нижней панели нажмите <strong>«Демонстрация экрана»</strong>.</li>
+            <li>Выберите, что хотите показывать: весь экран, отдельное окно или часть экрана.</li>
+            <li>Если вы показываете видео, включите параметр <strong>«Звук компьютера»</strong>.</li>
+            <li>Если хотите разрешить пометки поверх демонстрации, включите <strong>«Рисование на экране»</strong>.</li>
+            <li>Нажмите <strong>«Поделиться»</strong>.</li>
+          </ol>
+          <div class="note ok">
+            Для большинства учебных сценариев удобнее показывать именно <strong>весь экран</strong>: так проще переключаться между презентацией, сайтом, видео и документами.
+          </div>
+          <div class="placeholder">
+            <img src="images/screen.png" alt="Настройки видео" style="width:100%; border-radius:18px; margin-top:16px; border:1px solid #d9e1ec;">
+          </div>
+        </div>
+      </article>
+
+      <article class="card span-6">
+        <div class="card-head">
+          <div class="badge">5</div>
+          <div class="card-title-wrap">
+            <h2>Чат и вопросы</h2>
+            <p>Как поддерживать контакт со студентами во время пары</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <ul class="check-list">
+            <li>Откройте чат на нижней панели, чтобы видеть сообщения участников.</li>
+            <li>В общем чате можно обмениваться сообщениями и файлами.</li>
+            <li>Участники могут оставлять реакции и задавать вопросы во вкладке <strong>«Вопросы»</strong>.</li>
+            <li>При необходимости можно отправить сообщение не всем, а конкретному участнику.</li>
+            <li>Блок вопросов удобно использовать, чтобы не перебивать докладчика во время объяснения.</li>
+          </ul>
+          <div class="placeholder">
+            <img src="images/chat.png" alt="Настройки видео" style="width:70%; border-radius:18px; margin-top:16px; border:1px solid #d9e1ec;">
+          </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card span-6">
+        <div class="card-head">
+          <div class="badge">6</div>
+          <div class="card-title-wrap">
+            <h2>Опросы и голосование</h2>
+            <p>Быстрая проверка понимания и обратная связь</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <ol class="steps">
+            <li>Во время встречи откройте <strong>«Инструменты»</strong>.</li>
+            <li>Выберите <strong>«Голосование»</strong>.</li>
+            <li>Введите вопрос и добавьте варианты ответа.</li>
+            <li>Запустите голосование и дайте участникам время на ответы.</li>
+            <li>После завершения обсудите результаты и при необходимости запустите новый опрос.</li>
+          </ol>
+          <div class="note">
+            Опросы удобно использовать в начале пары для входного вопроса, в середине — для проверки понимания, в конце — для быстрой обратной связи.
+          </div>
+          <div class="placeholder">
+            <img src="images/opros.png" alt="Настройки видео" style="width:100%; border-radius:18px; margin-top:16px; border:1px solid #d9e1ec;">
+          </div>
+        </div>
+      </article>
+
+      <article class="card span-6">
+        <div class="card-head">
+          <div class="badge">7</div>
+          <div class="card-title-wrap">
+            <h2>Таймер</h2>
+            <p>Для докладов, ответов студентов и работы по времени</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <ol class="steps">
+            <li>Во время встречи откройте <strong>«Инструменты»</strong>.</li>
+            <li>Выберите <strong>«Таймер»</strong>.</li>
+            <li>Установите нужное время и при необходимости включите звуковой сигнал.</li>
+            <li>Запустите таймер в начале выступления, задания или обсуждения.</li>
+            <li>По завершении времени напомните участникам о переходе к следующему этапу.</li>
+          </ol>
+          <div class="note ok">
+            Обратите внимание, таймер не дублируется в групповые заллы, он доступен только в общей комнате.
+          </div>
+          <div class="placeholder">
+            <img src="images/timer.png" alt="Настройки видео" style="width:100%; border-radius:18px; margin-top:16px; border:1px solid #d9e1ec;">
+          </div>
+        </div>
+      </article>
+
+      <article class="card span-6">
+        <div class="card-head">
+          <div class="badge">8</div>
+          <div class="card-title-wrap">
+            <h2>Групповые сессии</h2>
+            <p>Работа в мини-группах на семинарах и практиках</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <ol class="steps">
+            <li>Во время встречи откройте <strong>«Инструменты»</strong>.</li>
+            <li>Выберите <strong>«Групповая сессия»</strong>.</li>
+            <li>Настройте количество групп и распределение участников.</li>
+            <li>При необходимости переименуйте группы и скорректируйте состав уже после запуска.</li>
+            <li>Нажмите <strong>«Начать групповую сессию»</strong>, а после завершения — <strong>«Остановить сессию»</strong>.</li>
+          </ol>
+          <div class="note">
+            После остановки групповой сессии участники автоматически возвращаются в общую комнату.
+          </div>
+          <div class="placeholder">
+            <img src="images/groops.png" alt="Настройки видео" style="width:100%; border-radius:18px; margin-top:16px; border:1px solid #d9e1ec;">
+          </div>
+        </div>
+      </article>
+
+      <article class="card span-6">
+        <div class="card-head">
+          <div class="badge">9</div>
+          <div class="card-title-wrap">
+            <h2>Презентация внутри Толка</h2>
+            <p>Когда не хочется делиться всем экраном</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <ol class="steps">
+            <li>Во время встречи откройте <strong>«Инструменты»</strong>.</li>
+            <li>Выберите раздел <strong>«Презентации»</strong>.</li>
+            <li>Загрузите файл <strong>PPTX</strong> или <strong>PDF</strong>.</li>
+            <li>После подготовки файла нажмите <strong>«Начать демонстрацию»</strong>.</li>
+            <li>Переключайте слайды через навигацию внизу; для завершения нажмите <strong>«Завершить»</strong>.</li>
+          </ol>
+          <div class="note ok">
+            Этот вариант удобен, когда нужно показывать только слайды и не отвлекать студентов лишними окнами на рабочем столе. <p> </p>
+            Однако, в презентациях внутри Толка недоступны видео, анимация и некоторые шрифты, поэтому для сложных презентаций лучше использовать демонстрацию всего экрана.
+          </div>
+      </article>
+  </div>
+</body>
+</html>
