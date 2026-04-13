@@ -139,10 +139,12 @@
 
     .muted { color: var(--muted); }
 
-    .span-7 { grid-column: span 7; }
-    .span-5 { grid-column: span 5; }
-    .span-6 { grid-column: span 6; }
-    .span-12 { grid-column: span 12; }
+    .span-5,
+    .span-6,
+    .span-7,
+    .span-12 {
+      grid-column: span 1;
+    }
 
     .quick-list,
     .steps,
@@ -247,6 +249,22 @@
     .card-body {
       position: relative;
       z-index: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .card-image {
+      display: block;
+      width: 100%;
+      border-radius: 18px;
+      margin-top: 16px;
+      border: 1px solid #d9e1ec;
+    }
+    
+    .card-image.narrow {
+      width: 70%;
+      margin: 16px auto 0;
     }
 
     .placeholder {
@@ -454,125 +472,126 @@
         </div>
       </article>
 
-      <article class="card span-6">
-        <div class="card-head">
-          <div class="badge">5</div>
-          <div class="card-title-wrap">
-            <h2>Чат и вопросы</h2>
-            <p>Как поддерживать контакт со студентами во время пары</p>
-          </div>
-        </div>
-        <div class="card-body">
-          <ul class="check-list">
-            <li>Откройте чат на нижней панели, чтобы видеть сообщения участников.</li>
-            <li>В общем чате можно обмениваться сообщениями и файлами.</li>
-            <li>Участники могут оставлять реакции и задавать вопросы во вкладке <strong>«Вопросы»</strong>.</li>
-            <li>При необходимости можно отправить сообщение не всем, а конкретному участнику.</li>
-            <li>Блок вопросов удобно использовать, чтобы не перебивать докладчика во время объяснения.</li>
-          </ul>
-          <div class="placeholder">
-            <img src="images/chat.png" alt="Настройки видео" style="width:70%; border-radius:18px; margin-top:16px; border:1px solid #d9e1ec;">
-          </div>
-          </div>
-        </div>
-      </article>
+<article class="card span-6">
+  <div class="card-head">
+    <div class="badge">5</div>
+    <div class="card-title-wrap">
+      <h2>Чат и вопросы</h2>
+      <p>Как поддерживать контакт со студентами во время пары</p>
+    </div>
+  </div>
+  <div class="card-body">
+    <ul class="check-list">
+      <li>Откройте чат на нижней панели, чтобы видеть сообщения участников.</li>
+      <li>В общем чате можно обмениваться сообщениями и файлами.</li>
+      <li>Участники могут оставлять реакции и задавать вопросы во вкладке <strong>«Вопросы»</strong>.</li>
+      <li>При необходимости можно отправить сообщение не всем, а конкретному участнику.</li>
+      <li>Блок вопросов удобно использовать, чтобы не перебивать докладчика во время объяснения.</li>
+    </ul>
+    <div class="placeholder">
+      <img src="images/chat.png" alt="Чат и вопросы" class="card-image narrow">
+    </div>
+  </div>
+</article>
 
-      <article class="card span-6">
-        <div class="card-head">
-          <div class="badge">6</div>
-          <div class="card-title-wrap">
-            <h2>Опросы и голосование</h2>
-            <p>Быстрая проверка понимания и обратная связь</p>
-          </div>
-        </div>
-        <div class="card-body">
-          <ol class="steps">
-            <li>Во время встречи откройте <strong>«Инструменты»</strong>.</li>
-            <li>Выберите <strong>«Голосование»</strong>.</li>
-            <li>Введите вопрос и добавьте варианты ответа.</li>
-            <li>Запустите голосование и дайте участникам время на ответы.</li>
-            <li>После завершения обсудите результаты и при необходимости запустите новый опрос.</li>
-          </ol>
-          <div class="note">
-            Опросы удобно использовать в начале пары для входного вопроса, в середине — для проверки понимания, в конце — для быстрой обратной связи.
-          </div>
-          <div class="placeholder">
-            <img src="images/opros.png" alt="Настройки видео" style="width:100%; border-radius:18px; margin-top:16px; border:1px solid #d9e1ec;">
-          </div>
-        </div>
-      </article>
+<article class="card span-6">
+  <div class="card-head">
+    <div class="badge">6</div>
+    <div class="card-title-wrap">
+      <h2>Опросы и голосование</h2>
+      <p>Быстрая проверка понимания и обратная связь</p>
+    </div>
+  </div>
+  <div class="card-body">
+    <ol class="steps">
+      <li>Во время встречи откройте <strong>«Инструменты»</strong>.</li>
+      <li>Выберите <strong>«Голосование»</strong>.</li>
+      <li>Введите вопрос и добавьте варианты ответа.</li>
+      <li>Запустите голосование и дайте участникам время на ответы.</li>
+      <li>После завершения обсудите результаты и при необходимости запустите новый опрос.</li>
+    </ol>
+    <div class="note">
+      Опросы удобно использовать в начале пары для входного вопроса, в середине — для проверки понимания, в конце — для быстрой обратной связи.
+    </div>
+    <div class="placeholder">
+      <img src="images/opros.png" alt="Опросы и голосование" class="card-image">
+    </div>
+  </div>
+</article>
 
-      <article class="card span-6">
-        <div class="card-head">
-          <div class="badge">7</div>
-          <div class="card-title-wrap">
-            <h2>Таймер</h2>
-            <p>Для докладов, ответов студентов и работы по времени</p>
-          </div>
-        </div>
-        <div class="card-body">
-          <ol class="steps">
-            <li>Во время встречи откройте <strong>«Инструменты»</strong>.</li>
-            <li>Выберите <strong>«Таймер»</strong>.</li>
-            <li>Установите нужное время и при необходимости включите звуковой сигнал.</li>
-            <li>Запустите таймер в начале выступления, задания или обсуждения.</li>
-            <li>По завершении времени напомните участникам о переходе к следующему этапу.</li>
-          </ol>
-          <div class="note ok">
-            Обратите внимание, таймер не дублируется в групповые заллы, он доступен только в общей комнате.
-          </div>
-          <div class="placeholder">
-            <img src="images/timer.png" alt="Настройки видео" style="width:100%; border-radius:18px; margin-top:16px; border:1px solid #d9e1ec;">
-          </div>
-        </div>
-      </article>
+<article class="card span-6">
+  <div class="card-head">
+    <div class="badge">7</div>
+    <div class="card-title-wrap">
+      <h2>Таймер</h2>
+      <p>Для докладов, ответов студентов и работы по времени</p>
+    </div>
+  </div>
+  <div class="card-body">
+    <ol class="steps">
+      <li>Во время встречи откройте <strong>«Инструменты»</strong>.</li>
+      <li>Выберите <strong>«Таймер»</strong>.</li>
+      <li>Установите нужное время и при необходимости включите звуковой сигнал.</li>
+      <li>Запустите таймер в начале выступления, задания или обсуждения.</li>
+      <li>По завершении времени напомните участникам о переходе к следующему этапу.</li>
+    </ol>
+    <div class="note ok">
+      Обратите внимание: таймер не дублируется в групповые залы, он доступен только в общей комнате.
+    </div>
+    <div class="placeholder">
+      <img src="images/timer.png" alt="Таймер" class="card-image">
+    </div>
+  </div>
+</article>
 
-      <article class="card span-6">
-        <div class="card-head">
-          <div class="badge">8</div>
-          <div class="card-title-wrap">
-            <h2>Групповые сессии</h2>
-            <p>Работа в мини-группах на семинарах и практиках</p>
-          </div>
-        </div>
-        <div class="card-body">
-          <ol class="steps">
-            <li>Во время встречи откройте <strong>«Инструменты»</strong>.</li>
-            <li>Выберите <strong>«Групповая сессия»</strong>.</li>
-            <li>Настройте количество групп и распределение участников.</li>
-            <li>При необходимости переименуйте группы и скорректируйте состав уже после запуска.</li>
-            <li>Нажмите <strong>«Начать групповую сессию»</strong>, а после завершения — <strong>«Остановить сессию»</strong>.</li>
-          </ol>
-          <div class="note">
-            После остановки групповой сессии участники автоматически возвращаются в общую комнату.
-          </div>
-          <div class="placeholder">
-            <img src="images/groops.png" alt="Настройки видео" style="width:100%; border-radius:18px; margin-top:16px; border:1px solid #d9e1ec;">
-          </div>
-        </div>
-      </article>
+<article class="card span-6">
+  <div class="card-head">
+    <div class="badge">8</div>
+    <div class="card-title-wrap">
+      <h2>Групповые сессии</h2>
+      <p>Работа в мини-группах на семинарах и практиках</p>
+    </div>
+  </div>
+  <div class="card-body">
+    <ol class="steps">
+      <li>Во время встречи откройте <strong>«Инструменты»</strong>.</li>
+      <li>Выберите <strong>«Групповая сессия»</strong>.</li>
+      <li>Настройте количество групп и распределение участников.</li>
+      <li>При необходимости переименуйте группы и скорректируйте состав уже после запуска.</li>
+      <li>Нажмите <strong>«Начать групповую сессию»</strong>, а после завершения — <strong>«Остановить сессию»</strong>.</li>
+    </ol>
+    <div class="note">
+      После остановки групповой сессии участники автоматически возвращаются в общую комнату.
+    </div>
+    <div class="placeholder">
+      <img src="images/groops.png" alt="Групповые сессии" class="card-image">
+    </div>
+  </div>
+</article>
 
-      <article class="card span-6">
-        <div class="card-head">
-          <div class="badge">9</div>
-          <div class="card-title-wrap">
-            <h2>Презентация внутри Толка</h2>
-            <p>Когда не хочется делиться всем экраном</p>
-          </div>
-        </div>
-        <div class="card-body">
-          <ol class="steps">
-            <li>Во время встречи откройте <strong>«Инструменты»</strong>.</li>
-            <li>Выберите раздел <strong>«Презентации»</strong>.</li>
-            <li>Загрузите файл <strong>PPTX</strong> или <strong>PDF</strong>.</li>
-            <li>После подготовки файла нажмите <strong>«Начать демонстрацию»</strong>.</li>
-            <li>Переключайте слайды через навигацию внизу; для завершения нажмите <strong>«Завершить»</strong>.</li>
-          </ol>
-          <div class="note ok">
-            Этот вариант удобен, когда нужно показывать только слайды и не отвлекать студентов лишними окнами на рабочем столе. <p> </p>
-            Однако, в презентациях внутри Толка недоступны видео, анимация и некоторые шрифты, поэтому для сложных презентаций лучше использовать демонстрацию всего экрана.
-          </div>
-      </article>
+<article class="card span-6">
+  <div class="card-head">
+    <div class="badge">9</div>
+    <div class="card-title-wrap">
+      <h2>Презентация внутри Толка</h2>
+      <p>Когда не хочется делиться всем экраном</p>
+    </div>
+  </div>
+  <div class="card-body">
+    <ol class="steps">
+      <li>Во время встречи откройте <strong>«Инструменты»</strong>.</li>
+      <li>Выберите раздел <strong>«Презентации»</strong>.</li>
+      <li>Загрузите файл <strong>PPTX</strong> или <strong>PDF</strong>.</li>
+      <li>После подготовки файла нажмите <strong>«Начать демонстрацию»</strong>.</li>
+      <li>Переключайте слайды через навигацию внизу; для завершения нажмите <strong>«Завершить»</strong>.</li>
+    </ol>
+    <div class="note ok">
+      Этот вариант удобен, когда нужно показывать только слайды и не отвлекать студентов лишними окнами на рабочем столе.
+      <p></p>
+      Однако в презентациях внутри Толка недоступны видео, анимация и некоторые шрифты, поэтому для сложных презентаций лучше использовать демонстрацию всего экрана.
+    </div>
+  </div>
+</article>
   </div>
 </body>
 </html>
